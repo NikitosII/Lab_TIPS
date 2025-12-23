@@ -21,7 +21,7 @@ st.sidebar.markdown("---")
 @st.cache_resource
 def load_model_artifacts():
     try:
-        model = joblib.load('model_artifacts/car_price_model.pkl')
+        model = joblib.load('./model_artifacts/car_price_model.pkl')
         with open('model_artifacts/label_encoders.pkl', 'rb') as f:
             label_encoders = pickle.load(f)
         scaler = joblib.load('model_artifacts/scaler.pkl')
